@@ -42,8 +42,11 @@
                         <th>MRN</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>DOB </th>
                         <th>Zip Code</th>
                         <th>Gender</th>
+                        <th>contact_mobile</th>
+                        <th>contact_home</th>
                         <th>Setting</th>
 
                     </tr>
@@ -55,8 +58,11 @@
                         <td>{{row.mrn}}</td>
                         <td>{{row.first_name}}</td>
                         <td>{{row.last_name}}</td>
+                        <td>{{row.dob}}</td>
                         <td>{{row.zip_code}} </td>
                         <td>{{row.gender}}</td>
+                        <td>{{row.contact_mobile}}</td>
+                        <td>{{row.contact_home}}</td>
                         <td>
                             <a href="/update/{{row.mrn}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.mrn}}">Edit</a>
                             <a href="/delete/{{row.mrn}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
@@ -91,9 +97,22 @@
                                     <input type="text" class="form-control" name="last_name" value="{{row.last_name}}">
                                 </div>
                                 <div class="form-group">
+                                    <label>Date of Birth:</label>
+                                    <input type="text" class="form-control" name="dob" value="{{row.dob}}">
+                                </div>
+                                <div class="form-group">
                                     <label>Gender:</label>
                                     <input type="text" class="form-control" name="gender" value="{{row.gender}}">
                                 </div> 
+                            </div>                                 
+                            <div class="form-group">
+                                <label>Contact Mobile:</label>
+                                <input type="text" class="form-control" name="contact_mobile" value="{{row.contact_mobile}}">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Home:</label>
+                                <input type="text" class="form-control" name="contact_home" value="{{row.contact_home}}">
+                            </div>
                                 <div class="form-group">
                                     <button class="btn btn-primary" type="submit">Update</button>
                                 </div>
@@ -142,12 +161,24 @@
                                 <input type="text" class="form-control" name="last_name" required="1">
                             </div>
                             <div class="form-group">
+                                <label> Date of Birth </label>
+                                <input type="text" class="form-control" name="dob" required="1">
+                            </div>
+                            <div class="form-group">
                                 <label>Zip Code </label>
                                 <input type="text" class="form-control" name="zip_code" required="1">
                             </div>
                             <div class="form-group">
                                 <label> Gender </label>
                                 <input type="text" class="form-control" name="gender" required="1">
+                            </div>
+                            <div class="form-group">
+                                <label> Contact Mobile </label>
+                                <input type="text" class="form-control" name="contact_mobile" required="1">
+                            </div>
+                            <div class="form-group">
+                                <label> Contact Home </label>
+                                <input type="text" class="form-control" name="contact_home" required="1">
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary" type="submit">Add Patient</button>
